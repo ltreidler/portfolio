@@ -4,6 +4,7 @@ import { css, jsx } from "@emotion/react";
 import { H1, H4 } from "./emotion/Text";
 import Box from "./emotion/Box";
 import Section from "./emotion/Section";
+import { BrowserWrapper, TitleAndIcons } from "./emotion/Browser";
 
 const Technologies = () => {
   const technologies = [
@@ -37,7 +38,9 @@ const Technologies = () => {
   const boxStyles = css({
     width: "fit-content",
     height: "fit-content",
-    marginTop: "3rem",
+    backgroundColor: "white",
+    display: "flex",
+    borderTop: "3px solid black",
   });
 
   const listStyles = css({
@@ -52,20 +55,23 @@ const Technologies = () => {
   });
 
   return (
-    <Section color="orangeCrayon" css={articleStyles}>
-      <H1>Technologies</H1>
-      <Box css={boxStyles} color="grass">
-        {technologies.map((list) => (
-          <span css={listStyles}>
-            <H4 css={{ marginTop: 0, marginBottom: "0.5rem" }}>{list[0]}</H4>
-            <>
-              {list.slice(1).map((item) => (
-                <li>{item}</li>
-              ))}
-            </>
-          </span>
-        ))}
-      </Box>
+    <Section color="orangeCrayon" css={articleStyles} id="tech">
+      <H1 css={{ marginBottom: "2rem" }}>Technologies</H1>
+      <BrowserWrapper color="grass">
+        <TitleAndIcons text="tech.docx" />
+        <div css={boxStyles} color="grass">
+          {technologies.map((list) => (
+            <span css={listStyles}>
+              <H4 css={{ marginTop: 0, marginBottom: "0.5rem" }}>{list[0]}</H4>
+              <>
+                {list.slice(1).map((item) => (
+                  <li>{item}</li>
+                ))}
+              </>
+            </span>
+          ))}
+        </div>
+      </BrowserWrapper>
     </Section>
   );
 };

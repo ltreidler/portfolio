@@ -42,7 +42,7 @@ const ProjectRow = ({
   return (
     <section css={sectionStyles}>
       {browserImg && (
-        <BrowserWrapper css={{ backgroundColor: colors[browserColor] }}>
+        <BrowserWrapper color={browserColor}>
           <SearchAndIcons link={links[1]} />
           <img className="projectImg" src={browserImg} css={imgStyle} />
         </BrowserWrapper>

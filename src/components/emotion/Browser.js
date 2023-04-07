@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css, jsx } from "@emotion/react";
 import styled from "@emotion/styled";
+import { colors } from "../global";
 
-export const BrowserWrapper = styled.div({
+export const BrowserWrapper = styled.div(({ color }) => ({
   height: "110%",
   border: "3px solid black",
   width: "fit-content",
@@ -12,7 +13,8 @@ export const BrowserWrapper = styled.div({
   borderRadius: "10px",
   boxShadow: "-0.5rem 0.5rem black",
   paddingTop: "0.3rem",
-});
+  backgroundColor: colors[color] || "white",
+}));
 
 export const Icons = () => {
   const iconStyle = {
@@ -21,11 +23,20 @@ export const Icons = () => {
   };
 
   return (
-    <>
+    <span css={{ display: "flex" }}>
       {[1, 2, 3].map(() => (
         <i className="fa-regular fa-circle fa-md" style={iconStyle}></i>
       ))}
-    </>
+    </span>
+  );
+};
+
+export const TitleAndIcons = ({ text }) => {
+  return (
+    <span css={{ display: "flex", alignItems: "center" }}>
+      <Icons />
+      <span css={{ marginLeft: "30%" }}>{text}</span>
+    </span>
   );
 };
 
