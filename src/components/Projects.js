@@ -4,7 +4,6 @@ import { css, jsx } from "@emotion/react";
 import { Body, H3, H2, H1 } from "./emotion/Text";
 import ProjectRow from "./ProjectRow";
 import Section from "./emotion/Section";
-import Blob from "./emotion/Blob";
 
 const articleStyles = css({
   flexDirection: "column",
@@ -60,7 +59,7 @@ const projectsArray = [
   },
   {
     title: "Dig!",
-    imgs: ["dig_2.png", "dig_1.png", "dig_3.png"],
+    phoneImgs: ["dig_2.png", "dig_1.png", "dig_3.png"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     technologies: [

@@ -5,6 +5,7 @@ import { Body, H3 } from "./emotion/Text";
 import { Button } from "./emotion/Button";
 import Box from "./emotion/Box";
 import { BrowserWrapper, SearchAndIcons } from "./emotion/Browser";
+import { PhoneWrapper } from "./emotion/Phone";
 
 const ProjectRow = ({
   title,
@@ -14,12 +15,17 @@ const ProjectRow = ({
   browserImg,
   links,
   browserColor,
+  phoneImgs,
 }) => {
   const imgStyle = css({
     borderTop: "3px solid black",
     maxHeight: "25rem",
     width: "auto",
     marginTop: "0.3rem",
+  });
+
+  const phoneStyle = css({
+    maxHeight: "25rem",
   });
 
   const sectionStyles = css({
@@ -47,6 +53,14 @@ const ProjectRow = ({
           <img className="projectImg" src={browserImg} css={imgStyle} />
         </BrowserWrapper>
       )}
+
+      <>
+        {phoneImgs?.map((img) => (
+          <PhoneWrapper>
+            <img className="projectImg" src={img} css={phoneStyle} />
+          </PhoneWrapper>
+        ))}
+      </>
 
       <Box border="3" color="white" css={descriptionStyles}>
         <H3 css={{ margin: 0 }}>{title}</H3>

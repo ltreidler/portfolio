@@ -87,7 +87,7 @@ const Heading = () => {
   });
 
   return (
-    <Section css={headingStyle} color="grass">
+    <Section css={headingStyle} color="grass" id="start">
       <section css={sectionStyle}>
         <BrowserWrapper css={hiBrowser} color="rust">
           <TitleAndIcons text="Alert!" />

@@ -93,7 +93,9 @@ const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <Body css={{ marginLeft: "2rem" }}>Portolio</Body>
+        <Body css={{ marginLeft: "2rem" }} onClick={() => scroll("start")}>
+          Portolio
+        </Body>
         <div ref={navRef}>
           <div css={navigateCss}>
             <p>Navigate</p>
