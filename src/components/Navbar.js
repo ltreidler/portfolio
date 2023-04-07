@@ -7,13 +7,14 @@ const barStyles = css({
   width: "100vw",
   height: "3rem",
   position: "fixed",
-  backgroundColor: "white",
+  backgroundColor: colors.taxiCab,
   top: 0,
   left: 0,
   right: 0,
   borderBottom: "0.2rem solid black",
   display: "flex",
   justifyContent: "flex-end",
+  zIndex: 3,
 });
 
 const Navbar = () => {

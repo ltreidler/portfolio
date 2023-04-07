@@ -27,4 +27,30 @@ export const colors = {
   seafoam: "#259E9E",
   burntSienna: "#C03022",
   goldenrod: "#FAD26C",
+  //goldenrod: "#F9B719",
+  offWhite: "#fffff1",
+  white: "#ffffff",
+  black: "#000000",
+  deepPurple: "#472982",
+  //to test
+
+  rust: "#D93E30",
+  sunsetPink: "#F55D98",
+  forest: "#2A6450",
+  powderBlue: "#8CB9C4",
+  //from medium
+  taxiCab: "#F2CB07",
+  sand: "#FFF1E8",
+  orangeCrayon: "#F29F05",
+  grass: "#7ABF49",
+  brightBlue: "#6D8EF2",
+  sunsetRed: "#F25D50",
+  electricBlue: "#6FCDDF",
+  sun: "#FFDC06",
+  bluestBlue: "#3300FF",
+  //gumroad
+  pondWater: "#26A68E",
+  crayolaOrange: "#F2B705",
+  electricPink: "#F28DE1",
+  powderedBlue: "#99B6F2",
 };

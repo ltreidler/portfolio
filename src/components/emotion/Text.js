@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
+import { colors } from "../global";
 
 export const H1 = styled.h1(
   {
     fontSize: 100,
     fontWeight: 800,
     margin: 0,
+    zIndex: 1,
   },
-  (props) => ({ color: props.color || "black" })
+  ({ color }) => ({ color: colors[color] || "black" })
 );
 
 export const H2 = styled.h2(
@@ -15,23 +17,31 @@ export const H2 = styled.h2(
     fontWeight: 700,
     margin: 0,
   },
-  (props) => ({ color: props.color || "black" })
+  ({ color }) => ({ color: colors[color] || "black" })
 );
 
 export const H3 = styled.h2(
   {
-    fontSize: 20,
+    fontSize: 40,
     fontWeight: 600,
   },
-  (props) => ({ color: props.color || "black" })
+  ({ color }) => ({ color: colors[color] || "black" })
+);
+
+export const H4 = styled.h2(
+  {
+    fontSize: 30,
+    fontWeight: 600,
+  },
+  ({ color }) => ({ color: colors[color] || "black" })
 );
 
 export const Body = styled.p(
   {
-    fontSize: 14,
+    fontSize: 20,
     fontWeight: 500,
   },
-  (props) => ({ color: props.color || "black" })
+  ({ color }) => ({ color: colors[color] || "black" })
 );
 
 export const Link = styled.a(
@@ -39,7 +49,7 @@ export const Link = styled.a(
     fontSize: 18,
     fontWeight: 500,
   },
-  (props) => ({ color: props.color || "black" })
+  ({ color }) => ({ color: colors[color] || "black" })
 );
 
 export const NavLink = styled.a({
