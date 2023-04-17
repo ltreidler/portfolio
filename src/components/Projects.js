@@ -13,7 +13,6 @@ const projectsArray = [
   {
     title: "Seed",
     browserImg: "seed_screenshot.png",
-    browserColor: "electricPink",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     technologies: [
@@ -38,7 +37,6 @@ const projectsArray = [
   {
     title: "Wild Roots",
     browserImg: "wild_roots_screenshot.png",
-    browserColor: "electricBlue",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     technologies: [
@@ -75,8 +73,10 @@ const projectsArray = [
 ];
 
 const Projects = () => (
-  <Section id="projects" css={articleStyles} color="parchment">
-    <H1 css={{ marginBottom: "3rem" }}>Projects</H1>
+  <Section id="projects" css={articleStyles}>
+    <H1 css={{ marginBottom: "3rem" }} color="white">
+      Projects
+    </H1>
     {projectsArray.map((project, i) => (
       <ProjectRow
         {...project}

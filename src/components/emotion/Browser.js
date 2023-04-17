@@ -5,15 +5,17 @@ import { colors } from "../global";
 
 export const BrowserWrapper = styled.div(({ color }) => ({
   height: "110%",
-  border: "3px solid black",
   width: "fit-content",
   backgroundColor: "white",
   display: "flex",
   flexDirection: "column",
   borderRadius: "10px",
-  boxShadow: "-0.5rem 0.5rem black",
   paddingTop: "0.3rem",
   backgroundColor: colors[color] || "white",
+  transition: "0.3s",
+  "&:hover": {
+    transform: "translate(0, -5px)",
+  },
 }));
 
 export const Icons = () => {

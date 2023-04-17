@@ -10,17 +10,7 @@ const Contact = () => {
   const articleStyles = css({
     flexDirection: "column",
     alignItems: "center",
-  });
-
-  const boxStyle = css({
-    height: "fit-content",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    textAlign: "center",
-    borderTop: "3px solid black",
-    padding: "2rem",
-    backgroundColor: colors.parchment,
+    paddingTop: "3rem",
   });
 
   const socialsStyle = {
@@ -28,29 +18,46 @@ const Contact = () => {
     margin: "0.5rem",
   };
 
+  const boxStyles = css({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "3rem",
+  });
+
+  const linkCss = css({
+    transition: "0.3s",
+    "&:hover": {
+      color: colors.rust,
+    },
+  });
+
   return (
-    <Section id="contact" color="rust" css={articleStyles}>
-      <H1 css={{ fontSize: "80px", marginBottom: "3rem" }}>
+    <Section id="contact" css={articleStyles}>
+      <H1 color="white" css={{ fontSize: "80px", marginBottom: "3rem" }}>
         Let's get in contact!
       </H1>
-      <BrowserWrapper color="taxiCab">
-        <TitleAndIcons text="contact.pdf" />
-        <div css={boxStyle}>
-          <H4 color="black">Email me @ leahtreidler@gmail.com</H4>
-          <span>
-            <Body color="black">Or check me out on:</Body>
-            <a href="https://github.com/ltreidler">
-              <i class="fa-brands fa-linkedin fa-4x" style={socialsStyle}></i>
-            </a>
-            <a href="https://www.linkedin.com/in/ltreidler/">
-              <i
-                class="fa-brands fa-square-github fa-4x"
-                style={socialsStyle}
-              ></i>
-            </a>
-          </span>
-        </div>
-      </BrowserWrapper>
+      <Box css={boxStyles}>
+        <H4 color="black">
+          Email me @{" "}
+          <a href="mailto:leahtreidler@gmail.com" css={linkCss}>
+            leahtreidler@gmail.com
+          </a>
+        </H4>
+        <span>
+          <Body color="black">Or check me out on:</Body>
+          <a href="https://github.com/ltreidler">
+            <i class="fa-brands fa-linkedin fa-4x" style={socialsStyle}></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ltreidler/">
+            <i
+              class="fa-brands fa-square-github fa-4x"
+              style={socialsStyle}
+            ></i>
+          </a>
+        </span>
+      </Box>
     </Section>
   );
 };

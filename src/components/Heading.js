@@ -10,143 +10,75 @@ import {
   TitleAndIcons,
 } from "./emotion/Browser";
 import { NavButton } from "./emotion/Button";
+import Box from "./emotion/Box";
+
+const NavItem = ({ text, link }) => {
+  const navCss = css({
+    textAlign: "right",
+    transition: "0.3s",
+    "&:hover": {
+      color: "goldenrod",
+      transform: "translate(0, -5px)",
+    },
+  });
+
+  const scroll = (id) => {
+    const view = document.getElementById(id);
+    if (!view) return;
+    view.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  return (
+    <div onClick={() => scroll(link)}>
+      <H2 css={navCss} color="white">
+        {text}
+      </H2>
+    </div>
+  );
+};
 
 const Heading = () => {
   const headingStyle = css({
     margin: 0,
+    paddingTop: "10vh",
     flexDirection: "column",
-    zIndex: 1,
-  });
-
-  const sectionStyle = css({
+    zIndex: 10,
     display: "flex",
-    height: "100vh",
+    height: "80vh",
+    justifyContent: "space-between",
   });
 
-  const hiDiv = css({
-    borderTop: "3px solid black",
-    backgroundColor: colors.parchment,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "1rem",
-  });
-
-  const leahDiv = css({
-    borderTop: "3px solid black",
-    backgroundColor: colors.parchment,
-    display: "flex",
-    alignItems: "center",
-    padding: "1rem",
-  });
-
-  const engineerDiv = css({
-    borderTop: "3px solid black",
-    backgroundColor: colors.parchment,
-    width: "25vw",
-    paddingLeft: "3rem",
-  });
-
-  const navigationDiv = css({
-    borderTop: "3px solid black",
-    backgroundColor: colors.parchment,
-    width: "fit-content",
+  const nameSectionStyle = css({
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    padding: "1rem",
   });
 
-  const leahBrowser = css({
-    top: "13rem",
-    position: "absolute",
-    height: "fit-content",
-    left: "23rem",
-    zIndex: 2,
-  });
-
-  const navigationBrowser = css({
-    top: "30rem",
-    position: "absolute",
-    height: "fit-content",
+  const navSection = css({
+    display: "flex",
+    flexDirection: "column",
     width: "fit-content",
-    left: "23rem",
-    zIndex: 2,
   });
 
-  const hiBrowser = css({
-    marginLeft: "4vw",
-    height: "fit-content",
-  });
-
-  const engineerBrowser = css({
-    right: "4vw",
-    top: "8vw",
-    height: "fit-content",
-    position: "absolute",
-  });
+  const navLinks = [
+    ["Projects", "projects"],
+    ["Technologies", "tech"],
+    ["About", "about"],
+    ["Contact", "contact"],
+  ];
 
   return (
-    <Section css={headingStyle} color="grass" id="start">
-      <section css={sectionStyle}>
-        <BrowserWrapper css={hiBrowser} color="rust">
-          <TitleAndIcons text="Alert!" />
-          <div css={hiDiv}>
-            <i
-              class="fa-solid fa-triangle-exclamation fa-4x"
-              style={{ color: colors.orangeCrayon }}
-            ></i>
-            <H2 css={{ padding: "2rem" }}>Hi!</H2>
-          </div>
-        </BrowserWrapper>
-        <BrowserWrapper css={leahBrowser} color="electricBlue">
-          <TitleAndIcons text="Welcome!" />
-          <div css={leahDiv}>
-            <H2 css={{ padding: "2rem" }}>I'm Leah</H2>
-            <i
-              class="fa-regular fa-face-smile fa-4x"
-              style={{ color: colors.black }}
-            ></i>
-          </div>
-        </BrowserWrapper>
-        <BrowserWrapper css={engineerBrowser} color="electricPink">
-          <Icons />
-          <div css={engineerDiv}>
-            <H3>I'm a fullstack software engineer</H3>
-          </div>
-        </BrowserWrapper>
-        <BrowserWrapper css={navigationBrowser} color="taxiCab">
-          <Icons />
-          <div css={navigationDiv}>
-            <H3>What would you like to see?</H3>
-            <span>
-              <NavButton
-                text="Projects"
-                background="grass"
-                width="9rem"
-                link="projects"
-              />
-              <NavButton
-                text="Technologies"
-                background="orangeCrayon"
-                width="9rem"
-                link="tech"
-              />
-              <NavButton
-                text="About"
-                background="electricPink"
-                width="9rem"
-                link="about"
-              />
-              <NavButton
-                text="Contact"
-                background="sunsetRed"
-                width="9rem"
-                link="contact"
-              />
-            </span>
-          </div>
-        </BrowserWrapper>
+    <Section css={headingStyle} color="black" id="start">
+      <div css={{ display: "flex", justifyContent: "flex-end" }}>
+        <section css={navSection}>
+          {navLinks.map(([text, link]) => (
+            <NavItem text={text} link={link} />
+          ))}
+        </section>
+      </div>
+
+      <section css={nameSectionStyle}>
+        <H1 color="white">Leah Treidler</H1>
+        <H2 color="white">Fullstack software engineer</H2>
       </section>
     </Section>
   );

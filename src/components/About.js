@@ -8,26 +8,27 @@ import { BrowserWrapper, TitleAndIcons } from "./emotion/Browser";
 
 const About = () => {
   return (
-    <Section css={{ flexDirection: "column" }} color="electricPink" id="about">
+    <Section
+      css={{
+        flexDirection: "row-reverse",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingTop: "3rem",
+      }}
+      id="about"
+    >
       <H1
         css={{
           display: "flex",
-          justifyContent: "flex-end",
           marginRight: "5vw",
+          marginBottom: "1rem",
         }}
+        color="white"
       >
         About me
       </H1>
-      <BrowserWrapper color="electricBlue">
-        <TitleAndIcons text="me.txt" />
-        <div
-          css={{
-            width: "50vw",
-            padding: "1rem",
-            borderTop: "3px solid black",
-            backgroundColor: colors.parchment,
-          }}
-        >
+      <div css={{ display: "flex" }}>
+        <Box css={{ maxWidth: "80%" }}>
           <Body color="black">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -42,8 +43,8 @@ const About = () => {
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.
           </Body>
-        </div>
-      </BrowserWrapper>
+        </Box>
+      </div>
     </Section>
   );
 };

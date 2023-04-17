@@ -5,19 +5,45 @@ import { NavLink } from "./emotion/Text";
 import { H4, Body } from "./emotion/Text";
 import { useState, useEffect, useRef } from "react";
 
+// window.onscroll = () => {
+//   let current = "";
+
+//   sections.forEach((section) => {
+//     const sectionTop = section.offsetTop;
+//     if (pageYOffset >= sectionTop ) {
+//       current = section.getAttribute("id"); }
+//   });
+
+//   navLi.forEach((li) => {
+//     li.classList.remove("active");
+//     if (li.classList.contains(current)) {
+//       li.classList.add("active");
+//     }
+//   });
+// };
+
 const Navbar = () => {
   const barStyles = css({
     width: "100vw",
     height: "3rem",
-    position: "fixed",
-    backgroundColor: colors.taxiCab,
+    position: "sticky",
+    backgroundColor: "white",
     top: 0,
     left: 0,
     right: 0,
     borderBottom: "0.2rem solid black",
     display: "flex",
-    justifyContent: "flex-start",
+    justifyContent: "flex-end",
     zIndex: 3,
+    transition: "0.3s",
+  });
+
+  const linkStyle = css({
+    marginRight: "2rem",
+    transition: "0.3s",
+    "&:hover": {
+      color: colors.royalBlue,
+    },
   });
 
   const navigateCss = css({
@@ -35,6 +61,28 @@ const Navbar = () => {
   });
 
   const [navCss, setNavCss] = useState({ display: "none" });
+  const [opacity, setOpacity] = useState("0");
+  const barRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", updateVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", updateVisibility);
+    };
+  }, []);
+
+  const updateVisibility = () => {
+    if (!barRef.current) return;
+
+    const rect = barRef.current.getBoundingClientRect();
+    const y = rect["y"];
+    if (y <= 0 && opacity !== "100%") {
+      setOpacity("100%");
+    } else if (y > 0 && opacity !== "0%") {
+      setOpacity("0%");
+    }
+  };
 
   const navStyles = css({
     position: "absolute",
@@ -84,7 +132,7 @@ const Navbar = () => {
   };
 
   return (
-    <section css={barStyles}>
+    <section css={[barStyles, { opacity: opacity }]} ref={barRef}>
       <ul
         css={{
           padding: 0,
@@ -93,30 +141,16 @@ const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <Body css={{ marginLeft: "2rem" }} onClick={() => scroll("start")}>
-          Portolio
-        </Body>
-        <div ref={navRef}>
-          <div css={navigateCss}>
-            <p>Navigate</p>
-          </div>
-          <div css={[navCss, navStyles]}>
-            {[
-              ["Projects", "projects"],
-              ["Technologies", "tech"],
-              ["About", "about"],
-              ["Contact", "contact"],
-            ].map((item) => (
-              <p
-                className="navItem"
-                css={navItemCss}
-                onClick={() => scroll(item[1])}
-              >
-                {item[0]}
-              </p>
-            ))}
-          </div>
-        </div>
+        {[
+          ["Projects", "projects"],
+          ["Technologies", "tech"],
+          ["About", "about"],
+          ["Contact", "contact"],
+        ].map(([label, id]) => (
+          <Body css={linkStyle} color="black" onClick={() => scroll(id)}>
+            {label}
+          </Body>
+        ))}
       </ul>
     </section>
   );

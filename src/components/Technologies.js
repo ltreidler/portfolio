@@ -49,29 +49,28 @@ const Technologies = () => {
 
   const articleStyles = css({
     display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
+    justifyContent: "space-between",
+    flexDirection: "row",
     alignItems: "center",
   });
 
   return (
-    <Section color="orangeCrayon" css={articleStyles} id="tech">
-      <H1 css={{ marginBottom: "2rem" }}>Technologies</H1>
-      <BrowserWrapper color="grass">
-        <TitleAndIcons text="tech.docx" />
-        <div css={boxStyles} color="grass">
-          {technologies.map((list) => (
-            <span css={listStyles}>
-              <H4 css={{ marginTop: 0, marginBottom: "0.5rem" }}>{list[0]}</H4>
-              <>
-                {list.slice(1).map((item) => (
-                  <li>{item}</li>
-                ))}
-              </>
-            </span>
-          ))}
-        </div>
-      </BrowserWrapper>
+    <Section color="black" css={articleStyles} id="tech">
+      <H1 color="white" css={{ marginBottom: "2rem" }}>
+        Technologies
+      </H1>
+      <Box>
+        {technologies.map((list) => (
+          <span css={listStyles}>
+            <H4 css={{ marginTop: 0, marginBottom: "0.5rem" }}>{list[0]}</H4>
+            <>
+              {list.slice(1).map((item) => (
+                <li>{item}</li>
+              ))}
+            </>
+          </span>
+        ))}
+      </Box>
     </Section>
   );
 };

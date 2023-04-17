@@ -7,6 +7,8 @@ export const Button = ({ background, text, link, color, width }) => {
   const hover = {
     backgroundColor: "white",
     color: "black",
+    boxShadow: "0.3rem 0.3rem black",
+    transform: "translate(0, -0.3rem)",
   };
 
   const linkedView = document.getElementById(link);
@@ -27,7 +29,8 @@ export const Button = ({ background, text, link, color, width }) => {
     margin: "0.5rem",
     color: colors[color] || "black",
     fontSize: "20px",
-    boxShadow: "0.3rem 0.3rem black",
+    transition: "0.3s",
+    borderRadius: "5px",
     "&:hover,&:focus": hover,
   });
 

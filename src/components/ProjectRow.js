@@ -14,7 +14,6 @@ const ProjectRow = ({
   direction,
   browserImg,
   links,
-  browserColor,
   phoneImgs,
 }) => {
   const imgStyle = css({
@@ -48,7 +47,7 @@ const ProjectRow = ({
   return (
     <section css={sectionStyles}>
       {browserImg && (
-        <BrowserWrapper color={browserColor}>
+        <BrowserWrapper>
           <SearchAndIcons link={links[1]} />
           <img className="projectImg" src={browserImg} css={imgStyle} />
         </BrowserWrapper>
