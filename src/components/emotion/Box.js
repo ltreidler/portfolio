@@ -5,6 +5,8 @@ const Box = styled.div(({ border, shadow }) => ({
   padding: "1rem",
   backgroundColor: "white",
   zIndex: 1,
+  flexWrap: "wrap",
+  maxWidth: "70%",
   // transition: "0.3s",
   // "&:hover": {
   //   transform: "translate(0, -5px)",

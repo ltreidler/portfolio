@@ -18,6 +18,10 @@ const Contact = () => {
     margin: "0.5rem",
   };
 
+  const iconCss = css({
+    color: "green",
+  });
+
   const boxStyles = css({
     display: "flex",
     flexDirection: "column",
@@ -47,10 +51,10 @@ const Contact = () => {
         </H4>
         <span>
           <Body color="black">Or check me out on:</Body>
-          <a href="https://github.com/ltreidler">
+          <a href="https://www.linkedin.com/in/ltreidler/">
             <i class="fa-brands fa-linkedin fa-4x" style={socialsStyle}></i>
           </a>
-          <a href="https://www.linkedin.com/in/ltreidler/">
+          <a href="https://github.com/ltreidler" css={iconCss}>
             <i
               class="fa-brands fa-square-github fa-4x"
               style={socialsStyle}

@@ -2,21 +2,26 @@
 import { css, jsx } from "@emotion/react";
 import styled from "@emotion/styled";
 import { colors } from "../global";
+import { mq } from "../global";
 
-export const BrowserWrapper = styled.div(({ color }) => ({
-  height: "110%",
-  width: "fit-content",
-  backgroundColor: "white",
-  display: "flex",
-  flexDirection: "column",
-  borderRadius: "10px",
-  paddingTop: "0.3rem",
-  backgroundColor: colors[color] || "white",
-  transition: "0.3s",
-  "&:hover": {
-    transform: "translate(0, -5px)",
-  },
-}));
+//const breakpoints = [576, 768, 992, 1200];
+
+export const BrowserWrapper = styled.div(({ color }) =>
+  mq({
+    height: "fit-content",
+    width: ["95%", "95%", "90%", "50%"],
+    backgroundColor: "white",
+    display: "flex",
+    flexDirection: "column",
+    borderRadius: "10px",
+    paddingTop: "0.3rem",
+    backgroundColor: colors[color] || "white",
+    transition: "0.3s",
+    "&:hover": {
+      transform: "translate(0, -5px)",
+    },
+  })
+);
 
 export const Icons = () => {
   const iconStyle = {

@@ -4,7 +4,6 @@ import { css, jsx } from "@emotion/react";
 import { Body, H1 } from "./emotion/Text";
 import Box from "./emotion/Box";
 import Section from "./emotion/Section";
-import { BrowserWrapper, TitleAndIcons } from "./emotion/Browser";
 
 const About = () => {
   return (
@@ -14,6 +13,7 @@ const About = () => {
         justifyContent: "space-between",
         alignItems: "center",
         paddingTop: "3rem",
+        flexWrap: "wrap",
       }}
       id="about"
     >

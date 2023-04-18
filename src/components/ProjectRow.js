@@ -18,8 +18,6 @@ const ProjectRow = ({
 }) => {
   const imgStyle = css({
     borderTop: "3px solid black",
-    maxHeight: "25rem",
-    width: "auto",
     marginTop: "0.3rem",
   });
 
@@ -31,17 +29,21 @@ const ProjectRow = ({
     width: "100%",
     display: "flex",
     flexDirection: `row${direction}`,
-    flexWrap: "wrap",
+    flexWrap: "wrap-reverse",
     justifyContent: "space-around",
     marginBottom: "6rem",
   });
 
   const descriptionStyles = css({
-    width: "30%",
+    minWidth: "30%",
+    minWidth: "10rem",
+    maxWidth: "90%",
+    maxWidth: "30rem",
     height: "auto",
     flexDirection: "column",
     justifyContent: "flex-start",
     padding: "1rem",
+    marginBottom: "2rem",
   });
 
   return (
@@ -69,7 +71,9 @@ const ProjectRow = ({
         </Body>
         <ul>
           {technologies.map((tech) => (
-            <li>{tech}</li>
+            <li>
+              <Body css={{ margin: 0 }}>{tech}</Body>
+            </li>
           ))}
         </ul>
         <span>

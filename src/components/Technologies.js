@@ -52,6 +52,7 @@ const Technologies = () => {
     justifyContent: "space-between",
     flexDirection: "row",
     alignItems: "center",
+    flexWrap: "wrap",
   });
 
   return (

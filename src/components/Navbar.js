@@ -43,6 +43,7 @@ const Navbar = () => {
     transition: "0.3s",
     "&:hover": {
       color: colors.royalBlue,
+      transform: "translate(0,-0.1rem)",
     },
   });
 
@@ -65,6 +66,7 @@ const Navbar = () => {
   const barRef = useRef();
 
   useEffect(() => {
+    if (barRef.current) updateVisibility();
     window.addEventListener("scroll", updateVisibility);
 
     return () => {
@@ -148,7 +150,7 @@ const Navbar = () => {
           ["Contact", "contact"],
         ].map(([label, id]) => (
           <Body css={linkStyle} color="black" onClick={() => scroll(id)}>
-            {label}
+            {label.toUpperCase()}
           </Body>
         ))}
       </ul>

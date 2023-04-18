@@ -85,13 +85,6 @@ const Projects = () => (
         css={{ zIndex: 1 }}
       />
     ))}
-    {/* <Blob top="62rem" left="4rem" outline={true} index={0} z={2} />
-    <Blob top="61rem" left="3rem" color="orangeCrayon" index={0} z={0} />
-
-    <div>
-      <Blob top="110rem" left="31rem" outline={true} index={1} z={2} />
-      <Blob top="110rem" left="30rem" color="powderedBlue" index={1} z={0} />
-    </div> */}
   </Section>
 );
 
