@@ -13,9 +13,10 @@ function App() {
   const mainStyle = css({
     margin: 0,
     padding: 0,
-    minHeight: "200vh",
-    backgroundColor: colors.black,
+    height: "100%",
+    backgroundColor: "black",
     backgroundImage: `linear-gradient(${grid} .1em, transparent .1em), linear-gradient(90deg, ${grid} .1em, transparent .1em)`,
+    backgroundAttachment: "fixed",
     backgroundSize: "3em 3em",
   });
 
@@ -27,6 +28,16 @@ function App() {
     a {
       text-decoration: none;
       color: black;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: ${colors.royalBlue};
+    }
+    body {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
     }
   `;
 

@@ -9,7 +9,7 @@ import { mq } from "../global";
 export const BrowserWrapper = styled.div(({ color }) =>
   mq({
     height: "fit-content",
-    width: ["95%", "95%", "90%", "50%"],
+    width: ["95%", "95%", "95%", "90%", "50%"],
     backgroundColor: "white",
     display: "flex",
     flexDirection: "column",

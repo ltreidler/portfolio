@@ -7,6 +7,7 @@ import Section from "./emotion/Section";
 
 const articleStyles = css({
   flexDirection: "column",
+  marginTop: "4rem",
 });
 
 const projectsArray = [

@@ -2,7 +2,7 @@
 import { colors } from "./global";
 import { css, jsx } from "@emotion/react";
 import { NavLink } from "./emotion/Text";
-import { H4, Body } from "./emotion/Text";
+import { H4, Body, NavbarLink } from "./emotion/Text";
 import { useState, useEffect, useRef } from "react";
 
 // window.onscroll = () => {
@@ -23,7 +23,22 @@ import { useState, useEffect, useRef } from "react";
 // };
 
 const Navbar = () => {
-  const barStyles = css({
+  const navLinks = [
+    ["Projects", "projects"],
+    ["Technologies", "tech"],
+    ["About", "about"],
+    ["Contact", "contact"],
+  ];
+
+  const scroll = (id) => {
+    const view = document.getElementById(id);
+    if (!view) return;
+    view.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const props = { navLinks, scroll };
+
+  const navCss = css({
     width: "100vw",
     height: "3rem",
     position: "sticky",
@@ -33,35 +48,25 @@ const Navbar = () => {
     right: 0,
     borderBottom: "0.2rem solid black",
     display: "flex",
-    justifyContent: "flex-end",
     zIndex: 3,
     transition: "0.3s",
+    justifyContent: "flex-end",
   });
 
-  const linkStyle = css({
-    marginRight: "2rem",
-    transition: "0.3s",
-    "&:hover": {
-      color: colors.royalBlue,
-      transform: "translate(0,-0.1rem)",
-    },
-  });
+  const bp = "500px";
 
-  const navigateCss = css({
-    marginLeft: "1rem",
-    height: "3rem",
-    display: "flex",
-    alignItems: "center",
-    padding: "0rem 1rem 0rem 1rem",
-    fontSize: "20px",
-    fontWeight: "500",
-    "&:hover": {
-      backgroundColor: "black",
-      color: "white",
-    },
-  });
+  const desktopCss = css`
+    @media (max-width: ${bp}) {
+      display: none !important;
+    }
+  `;
 
-  const [navCss, setNavCss] = useState({ display: "none" });
+  const mobileCss = css`
+    @media (min-width: ${bp}) {
+      display: none;
+    }
+  `;
+
   const [opacity, setOpacity] = useState("0");
   const barRef = useRef();
 
@@ -86,75 +91,42 @@ const Navbar = () => {
     }
   };
 
-  const navStyles = css({
-    position: "absolute",
-    backgroundColor: colors.parchment,
-    border: "2px solid black",
-    top: "3rem",
-    left: "9rem",
-    ".navItem": {
-      margin: "0.5rem",
-      fontSize: "25px",
-    },
-  });
-
-  const navItemCss = css({
-    "&:hover": {
-      backgroundColor: "black",
-      color: "white",
-    },
-  });
-
-  const navRef = useRef();
-
-  useEffect(() => {
-    if (navRef.current) {
-      const nav = navRef.current;
-      nav.addEventListener("mouseenter", () => setNavCss({}));
-
-      nav.addEventListener("mouseleave", () => setNavCss({ display: "none" }));
-    }
-
-    return () => {
-      if (navRef.current) {
-        const nav = navRef.current;
-        nav.removeEventListener("mouseenter", () => setNavCss({}));
-
-        nav.removeEventListener("mouseleave", () =>
-          setNavCss({ display: "none" })
-        );
-      }
-    };
-  }, []);
-
-  const scroll = (id) => {
-    const view = document.getElementById(id);
-    if (!view) return;
-    view.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
-    <section css={[barStyles, { opacity: opacity }]} ref={barRef}>
-      <ul
-        css={{
+    <nav css={[navCss, { opacity: opacity }]} ref={barRef}>
+      <DesktopNav {...props} mq={desktopCss} />
+      <MobileNav {...props} mq={mobileCss} />
+    </nav>
+  );
+};
+
+const DesktopNav = ({ navLinks, scroll, mq }) => {
+  return (
+    <div
+      css={[
+        {
           padding: 0,
           paddingLeft: "1rem",
           display: "flex",
           alignItems: "center",
-        }}
-      >
-        {[
-          ["Projects", "projects"],
-          ["Technologies", "tech"],
-          ["About", "about"],
-          ["Contact", "contact"],
-        ].map(([label, id]) => (
-          <Body css={linkStyle} color="black" onClick={() => scroll(id)}>
-            {label.toUpperCase()}
-          </Body>
-        ))}
-      </ul>
-    </section>
+        },
+        mq,
+      ]}
+    >
+      {navLinks.map(([label, id]) => (
+        <NavbarLink onClick={() => scroll(id)}>
+          {label.toUpperCase()}
+        </NavbarLink>
+      ))}
+    </div>
+  );
+};
+
+const MobileNav = ({ navLinks, scroll, mq }) => {
+  return (
+    <div css={mq}>
+      <input type="checkbox" />
+      <i class="fa-solid fa-bars fa-2x" style={{ color: "#000000" }}></i>
+    </div>
   );
 };
 

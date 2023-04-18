@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, jsx } from "@emotion/react";
-import { H1, Body, H4 } from "./emotion/Text";
+import { H1, Body, H4, H2 } from "./emotion/Text";
 import Box from "./emotion/Box";
 import Section from "./emotion/Section";
 import { BrowserWrapper, TitleAndIcons } from "./emotion/Browser";
@@ -30,18 +30,13 @@ const Contact = () => {
     padding: "3rem",
   });
 
-  const linkCss = css({
-    transition: "0.3s",
-    "&:hover": {
-      color: colors.rust,
-    },
-  });
+  const linkCss = css({});
 
   return (
     <Section id="contact" css={articleStyles}>
-      <H1 color="white" css={{ fontSize: "80px", marginBottom: "3rem" }}>
+      <H2 color="white" css={{ fontSize: "80px", marginBottom: "3rem" }}>
         Let's get in contact!
-      </H1>
+      </H2>
       <Box css={boxStyles}>
         <H4 color="black">
           Email me @{" "}

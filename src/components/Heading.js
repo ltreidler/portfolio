@@ -29,11 +29,12 @@ const NavItem = ({ text, link }) => {
   };
 
   return (
-    <div onClick={() => scroll(link)}>
+    <button css={{background: "transparent",
+    border: "0px",}} onClick={() => scroll(link)}>
       <H2 css={navCss} color="white">
         {text}
       </H2>
-    </div>
+    </button>
   );
 };
 
