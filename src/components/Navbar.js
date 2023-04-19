@@ -107,7 +107,7 @@ const DesktopNav = ({ navLinks, scroll, mq }) => {
 };
 
 const MobileNav = ({ navLinks, scroll, mq }) => {
-  const hidden = "translate(0, -21rem)";
+  const hidden = "translate(0, -27rem)";
   const [position, setPosition] = useState(hidden);
 
   const mobileCss = css({
