@@ -1,10 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import { colors } from "./global";
 import { css, jsx } from "@emotion/react";
 import { H1, H4 } from "./emotion/Text";
 import Box from "./emotion/Box";
 import Section from "./emotion/Section";
-import { BrowserWrapper, TitleAndIcons } from "./emotion/Browser";
+import { mq } from "./global";
 
 const Technologies = () => {
   const technologies = [
@@ -47,13 +46,21 @@ const Technologies = () => {
     margin: "1rem",
   });
 
-  const articleStyles = css({
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "row",
-    alignItems: "center",
-    flexWrap: "wrap",
-  });
+  const articleStyles = css(
+    mq({
+      display: "flex",
+      justifyContent: [
+        "center",
+        "center",
+        "space-around",
+        "space-around",
+        "space-around",
+      ],
+      flexDirection: "row",
+      alignItems: "center",
+      flexWrap: "wrap",
+    })
+  );
 
   return (
     <Section color="black" css={articleStyles} id="tech">
@@ -61,12 +68,12 @@ const Technologies = () => {
         Technologies
       </H1>
       <Box>
-        {technologies.map((list) => (
-          <span css={listStyles}>
+        {technologies.map((list, i) => (
+          <span css={listStyles} key={i}>
             <H4 css={{ marginTop: 0, marginBottom: "0.5rem" }}>{list[0]}</H4>
             <>
-              {list.slice(1).map((item) => (
-                <li>{item}</li>
+              {list.slice(1).map((item, i) => (
+                <li key={i}>{item}</li>
               ))}
             </>
           </span>

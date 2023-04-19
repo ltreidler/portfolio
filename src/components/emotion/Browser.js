@@ -4,8 +4,6 @@ import styled from "@emotion/styled";
 import { colors } from "../global";
 import { mq } from "../global";
 
-//const breakpoints = [576, 768, 992, 1200];
-
 export const BrowserWrapper = styled.div(({ color }) =>
   mq({
     height: "fit-content",
@@ -31,8 +29,8 @@ export const Icons = () => {
 
   return (
     <span css={{ display: "flex" }}>
-      {[1, 2, 3].map(() => (
-        <i className="fa-regular fa-circle fa-md" style={iconStyle}></i>
+      {[1, 2, 3].map((i) => (
+        <i className="fa-regular fa-circle fa-md" style={iconStyle} key={i}></i>
       ))}
     </span>
   );
@@ -61,7 +59,9 @@ export const SearchAndIcons = ({ link }) => {
     <span css={{ display: "flex", alignItems: "center" }}>
       <Icons />
       <div css={searchStyle}>
-        <a href={link}>{link}</a>
+        <a css={{ textDecoration: "none" }} href={link}>
+          {link}
+        </a>
       </div>
     </span>
   );

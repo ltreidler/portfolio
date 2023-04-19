@@ -3,8 +3,6 @@ import { css, jsx } from "@emotion/react";
 import { H1, Body, H4, H2 } from "./emotion/Text";
 import Box from "./emotion/Box";
 import Section from "./emotion/Section";
-import { BrowserWrapper, TitleAndIcons } from "./emotion/Browser";
-import { colors } from "./global";
 
 const Contact = () => {
   const articleStyles = css({
@@ -30,28 +28,24 @@ const Contact = () => {
     padding: "3rem",
   });
 
-  const linkCss = css({});
-
   return (
     <Section id="contact" css={articleStyles}>
-      <H2 color="white" css={{ fontSize: "80px", marginBottom: "3rem" }}>
+      <H1 color="white" css={{ marginBottom: "3rem", textAlign: "center" }}>
         Let's get in contact!
-      </H2>
+      </H1>
       <Box css={boxStyles}>
         <H4 color="black">
           Email me @{" "}
-          <a href="mailto:leahtreidler@gmail.com" css={linkCss}>
-            leahtreidler@gmail.com
-          </a>
+          <a href="mailto:leahtreidler@gmail.com">leahtreidler@gmail.com</a>
         </H4>
         <span>
           <Body color="black">Or check me out on:</Body>
           <a href="https://www.linkedin.com/in/ltreidler/">
-            <i class="fa-brands fa-linkedin fa-4x" style={socialsStyle}></i>
+            <i className="fa-brands fa-linkedin fa-4x" style={socialsStyle}></i>
           </a>
           <a href="https://github.com/ltreidler" css={iconCss}>
             <i
-              class="fa-brands fa-square-github fa-4x"
+              className="fa-brands fa-square-github fa-4x"
               style={socialsStyle}
             ></i>
           </a>

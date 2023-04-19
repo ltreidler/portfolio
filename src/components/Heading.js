@@ -1,16 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { colors } from "./global";
 import { css, jsx } from "@emotion/react";
-import { H1, H2, H3 } from "./emotion/Text";
+import { H1, H2 } from "./emotion/Text";
 import Section from "./emotion/Section";
-import {
-  BrowserWrapper,
-  SearchAndIcons,
-  Icons,
-  TitleAndIcons,
-} from "./emotion/Browser";
-import { NavButton } from "./emotion/Button";
-import Box from "./emotion/Box";
 
 const NavItem = ({ text, link }) => {
   const navCss = css({
@@ -29,8 +21,10 @@ const NavItem = ({ text, link }) => {
   };
 
   return (
-    <button css={{background: "transparent",
-    border: "0px",}} onClick={() => scroll(link)}>
+    <button
+      css={{ background: "transparent", border: "0px" }}
+      onClick={() => scroll(link)}
+    >
       <H2 css={navCss} color="white">
         {text}
       </H2>
@@ -71,8 +65,8 @@ const Heading = () => {
     <Section css={headingStyle} color="black" id="start">
       <div css={{ display: "flex", justifyContent: "flex-end" }}>
         <section css={navSection}>
-          {navLinks.map(([text, link]) => (
-            <NavItem text={text} link={link} />
+          {navLinks.map(([text, link], i) => (
+            <NavItem text={text} link={link} key={i} />
           ))}
         </section>
       </div>

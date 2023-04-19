@@ -11,14 +11,6 @@ export const Button = ({ background, text, link, color, width }) => {
     transform: "translate(0, -0.3rem)",
   };
 
-  const linkedView = document.getElementById(link);
-
-  const onClick = () => {
-    linkedView.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
-  //scrollIntoView(true)
-
   const buttonStyles = css({
     backgroundColor: colors[background] || colors.goldenrod,
     width: width || "10rem",
@@ -56,8 +48,6 @@ export const NavButton = ({ background, text, link, color, width }) => {
   const onClick = () => {
     linkedView.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-
-  //scrollIntoView(true)
 
   const buttonStyles = css({
     backgroundColor: colors[background] || colors.goldenrod,

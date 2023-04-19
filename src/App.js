@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Technologies from "./components/Technologies";
+import Footer from "./components/Footer";
 
 function App() {
   const grid = colors.white + "40";
@@ -26,7 +27,6 @@ function App() {
       box-sizing: "border-box";
     }
     a {
-      text-decoration: none;
       color: black;
       transition: 0.3s;
     }
@@ -52,6 +52,7 @@ function App() {
         <Technologies />
         <About />
         <Contact />
+        <Footer />
       </main>
     </>
   );

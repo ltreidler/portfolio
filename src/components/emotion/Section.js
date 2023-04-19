@@ -1,14 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
-import { colors } from "../global";
 
-const Section = styled.section(({ color }) => ({
+const Section = styled.section({
   width: "91%",
   display: "flex",
   margin: 0,
   padding: "4vw",
-  paddingTop: "0",
+  paddingTop: "4rem",
   zIndex: 3,
-}));
+});
 
 export default Section;

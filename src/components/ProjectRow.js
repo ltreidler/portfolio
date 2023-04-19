@@ -6,6 +6,7 @@ import { Button } from "./emotion/Button";
 import Box from "./emotion/Box";
 import { BrowserWrapper, SearchAndIcons } from "./emotion/Browser";
 import { PhoneWrapper } from "./emotion/Phone";
+import { mq } from "./global";
 
 const ProjectRow = ({
   title,
@@ -32,19 +33,19 @@ const ProjectRow = ({
     flexWrap: "wrap-reverse",
     justifyContent: "space-around",
     marginBottom: "6rem",
+    alignItems: "center",
   });
 
-  const descriptionStyles = css({
-    minWidth: "30%",
-    minWidth: "10rem",
-    maxWidth: "90%",
-    maxWidth: "30rem",
-    height: "auto",
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    padding: "1rem",
-    marginBottom: "2rem",
-  });
+  const descriptionStyles = css(
+    mq({
+      width: ["95%", "90%", "90%", "25rem", "25rem"],
+      height: "auto",
+      flexDirection: "column",
+      justifyContent: "flex-start",
+      padding: "1rem",
+      marginBottom: "2rem",
+    })
+  );
 
   return (
     <section css={sectionStyles}>
@@ -56,8 +57,8 @@ const ProjectRow = ({
       )}
 
       <>
-        {phoneImgs?.map((img) => (
-          <PhoneWrapper>
+        {phoneImgs?.map((img, i) => (
+          <PhoneWrapper key={i}>
             <img className="projectImg" src={img} css={phoneStyle} />
           </PhoneWrapper>
         ))}
@@ -66,12 +67,12 @@ const ProjectRow = ({
       <Box border="3" color="white" css={descriptionStyles}>
         <H3 css={{ margin: 0 }}>{title}</H3>
         <Body css={{ margin: "0.5rem" }}>{description}</Body>
-        <Body css={{ marginTop: "1rem", marginBottom: 0, fontSize: "25px" }}>
-          Technologies:
+        <Body css={{ marginTop: "1rem", marginBottom: 0 }}>
+          <b>Technologies:</b>
         </Body>
         <ul>
-          {technologies.map((tech) => (
-            <li>
+          {technologies.map((tech, i) => (
+            <li key={i}>
               <Body css={{ margin: 0 }}>{tech}</Body>
             </li>
           ))}

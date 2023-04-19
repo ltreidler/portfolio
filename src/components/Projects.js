@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { colors } from "./global";
 import { css, jsx } from "@emotion/react";
-import { Body, H3, H2, H1 } from "./emotion/Text";
+import { H1 } from "./emotion/Text";
 import ProjectRow from "./ProjectRow";
 import Section from "./emotion/Section";
 
@@ -15,7 +15,7 @@ const projectsArray = [
     title: "Seed",
     browserImg: "seed_screenshot.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A fullstack food and symptom tracker website. The app uses association rule mining to analyze data and identify potential associations. Through d3 graphs, users can easily visualize the app's insights.",
     technologies: [
       "React",
       "Redux",
@@ -39,7 +39,7 @@ const projectsArray = [
     title: "Wild Roots",
     browserImg: "wild_roots_screenshot.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A fullstack e-commerce plant shop. The site allows users to browse thousands of plants, store items in their carts, and checkout using Stripe payments. Users can keep track of their data by creating a free account or access the site as a guest.",
     technologies: [
       "React",
       "Redux",
@@ -60,7 +60,7 @@ const projectsArray = [
     title: "Dig!",
     phoneImgs: ["dig_2.png", "dig_1.png", "dig_3.png"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "A fullstack React Native dog playdate matching app. The app uses collaborative filtering and jaccard index methods to match dogs based on similar traits, breeds, friends and preferences.",
     technologies: [
       "React Native",
       "Redux",
