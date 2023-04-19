@@ -38,7 +38,7 @@ const ProjectRow = ({
 
   const descriptionStyles = css(
     mq({
-      width: ["95%", "90%", "90%", "25rem", "25rem"],
+      width: ["90%", "90%", "85%", "25rem", "25rem"],
       height: "auto",
       flexDirection: "column",
       justifyContent: "flex-start",

@@ -11,9 +11,8 @@ const About = () => {
   });
 
   const descriptionCss = css({
-    marginRight: "3rem",
-    marginLeft: "3rem",
     maxWidth: "45rem",
+    margin: "0 4vw 0 4vw",
   });
 
   const sectionCss = css(

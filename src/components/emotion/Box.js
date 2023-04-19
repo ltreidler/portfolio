@@ -6,7 +6,7 @@ const Box = styled.div({
   backgroundColor: "white",
   zIndex: 1,
   flexWrap: "wrap",
-  maxWidth: "70%",
+  maxWidth: "85%",
 });
 
 export default Box;
