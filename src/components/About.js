@@ -38,10 +38,9 @@ const About = () => {
           I'm constantly striving to expand my knowledge and skills in order to
           create innovative and impactful products. <br></br>
           <br></br> During my time at the Grace Hopper coding bootcamp, I had
-          the opportunity to collaborate with others and hone my skills in
-          building fully-functional websites. The experience gave me the
-          confidence to pursue a career in software engineering and I'm excited
-          about the possibilities that lie ahead.
+          the opportunity to collaborate with others and hone my skills through
+          building fully-functional websites. I'm excited to pursue a career in
+          backend or fullstack software engineering.
         </Body>
       </Box>
     </Section>

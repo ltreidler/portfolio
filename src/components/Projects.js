@@ -15,7 +15,7 @@ const projectsArray = [
     title: "Seed",
     browserImg: "seed_screenshot.png",
     description:
-      "A fullstack food and symptom tracker website. The app uses association rule mining to analyze data and identify potential associations. Through d3 graphs, users can easily visualize the app's insights.",
+      "A fullstack food and symptom tracker website. The app analyzes individual user's data to identify potential associations between foods and symptoms. Through d3 graphs, users can easily visualize the app's insights.",
     technologies: [
       "React",
       "Redux",
@@ -60,7 +60,7 @@ const projectsArray = [
     title: "Dig!",
     phoneImgs: ["dig_2.png", "dig_1.png", "dig_3.png"],
     description:
-      "A fullstack React Native dog playdate matching app. The app uses collaborative filtering and jaccard index methods to match dogs based on similar traits, breeds, friends and preferences.",
+      "A fullstack mobile dog playdate matching app. The app helps dogs find new friends by ranking potential matches based on shared traits, breeds, friends and preferences.",
     technologies: [
       "React Native",
       "Redux",
