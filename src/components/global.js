@@ -19,8 +19,9 @@ export const colors = {
   grass: "#7ABF49",
   brightBlue: "#6D8EF2",
   sunsetRed: "#F25D50",
-  electricBlue: "#6FCDDF",
+  electricBlue: "#0031F4",
   sun: "#FFDC06",
   crayolaOrange: "#F2B705",
   electricPink: "#F28DE1",
+  reddestRed: "#FF0B0B",
 };
