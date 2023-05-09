@@ -27,7 +27,7 @@ export const Button = ({ background, text, link, color, width }) => {
   });
 
   return (
-    <a href={link}>
+    <a href={link} target="_blank" rel="noopener noreferrer">
       <button css={buttonStyles}>{text}</button>
     </a>
   );

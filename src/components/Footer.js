@@ -13,7 +13,11 @@ export default () => {
   return (
     <article css={articleCss}>
       <Box css={{ width: "fit-content" }}>
-        <Link href="https://github.com/ltreidler/portfolio">
+        <Link
+          href="https://github.com/ltreidler/portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Github link for this site.
         </Link>
       </Box>

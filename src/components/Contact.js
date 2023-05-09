@@ -40,10 +40,19 @@ const Contact = () => {
         </H4>
         <span>
           <Body color="black">Or check me out on:</Body>
-          <a href="https://www.linkedin.com/in/ltreidler/">
+          <a
+            href="https://www.linkedin.com/in/ltreidler/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fa-brands fa-linkedin fa-4x" style={socialsStyle}></i>
           </a>
-          <a href="https://github.com/ltreidler" css={iconCss}>
+          <a
+            href="https://github.com/ltreidler"
+            css={iconCss}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i
               className="fa-brands fa-square-github fa-4x"
               style={socialsStyle}
