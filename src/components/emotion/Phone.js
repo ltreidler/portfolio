@@ -6,4 +6,8 @@ export const PhoneWrapper = styled.div({
   height: "fit-content",
   borderRadius: "5px",
   marginBottom: "1.5rem",
+  transition: "0.3s",
+  "&:hover": {
+    transform: "translate(0, -5px)",
+  },
 });

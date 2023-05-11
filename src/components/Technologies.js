@@ -7,7 +7,7 @@ import { mq } from "./global";
 
 const Technologies = () => {
   const technologies = [
-    ["Languages", "Javascript", "Python"],
+    ["Languages", "JavaScript", "Python", "TypeScript"],
     [
       "Frontend",
       "React",
@@ -19,15 +19,26 @@ const Technologies = () => {
       "HTML",
       "CSS",
       "Axios",
+      "jQuery",
     ],
-    ["Backend", "Flask", "Express", "JWT", "pandas", "MLxtend"],
+    [
+      "Backend",
+      "Flask",
+      "Express",
+      "JWT",
+      "pandas",
+      "MLxtend",
+      "Webpack",
+      "Node.js",
+    ],
     [
       "Databases",
       "MongoDB",
       "Mongoose",
       "PyMongo",
-      "Postgres",
+      "PostgreSQL",
       "MySQL",
+      "SQLite",
       "Sequelize",
       "Neo4j",
       "Cypher",
