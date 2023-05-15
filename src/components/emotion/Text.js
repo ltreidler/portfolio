@@ -47,7 +47,7 @@ export const Body = styled.p(({ color }) =>
 
 export const Link = styled.a(({ color }) =>
   mq({
-    fontSize: [8, 10, 12, 14, 18],
+    fontSize: [14, 15, 16, 17, 18],
     fontWeight: 500,
     color: colors[color] || "black",
   })
