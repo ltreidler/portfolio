@@ -39,35 +39,31 @@ const About = () => {
       </div>
       <Box css={descriptionCss}>
         <Body color="black">
-          I'm a former filmmaker and journalist turned software engineer with a
-          passion for <Red>learning new technologies</Red> and{" "}
+          I'm a software engineer with a passion for{" "}
+          <Red>learning new technologies</Red> and{" "}
           <Red>solving complex problems.</Red> I'm constantly striving to expand
           my knowledge and skills in order to create innovative and impactful
-          products. <br></br>
-          <br></br> I studied software engineering at{" "}
-          <Red>Grace Hopper's immersive coding bootcamp</Red>, where I spent 16
-          weeks learning fullstack development and collaborating to create
-          fully-functional projects.
+          products.
           <br></br>
           <br></br>
-          As a software engineer, I'm interested in working in backend or
-          fullstack development,
-          <Red> building data-driven applications</Red> that leverage the latest
-          technologies and tools to create scalable, innovative products.
-          Ultimately, I hope to use my technical skills to create accessible
+          I'm especially interested in working in backend or fullstack
+          development, <Red> building data-driven applications</Red> that
+          leverage the latest technologies and tools to create accessible
           applications that <Red>improve users' lives.</Red>
           <br></br>
-          <br></br>I have experience in <Red>fast-paced environments</Red> where
-          attention to detail is critical. Before transitioning to tech, I
-          worked as a radio journalist at NPR stations in Milwaukee and Salt
-          Lake City. In those roles, I analyzed large datasets to write
-          impactful articles and radio spots that reached{" "}
-          <Red>thousands of listeners and readers each day.</Red>
           <br></br>
+          I'm currently doing freelance work, including developing a "creativity
+          fitness" mobile application for CreativityPartners, a startup
+          consulting firm, and building a portfolio and online store for a
+          professional comic artist.
           <br></br>
-          Currently, I work as the Digital Content Manager for Creativity
-          Partners, a consulting firm, managing their website, building their
-          brand guide, and designing digital materials.
+          <br></br>Before transitioning to tech, I worked as a radio journalist
+          at NPR stations in Milwaukee and Salt Lake City, writing data-driven
+          stories that reached{" "}
+          <Red>thousands of listeners and readers each day.</Red> <br></br>
+          <br></br>I studied software engineering at Grace Hopper's immersive
+          coding bootcamp, honing my skills in fullstack development and
+          collaborating to create <Red>scalable, bug-free applications.</Red>
           <br></br>
           <br></br>
           Now, I'm <Red>searching for a new position</Red> where I can use my
