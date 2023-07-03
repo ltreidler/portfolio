@@ -20,16 +20,20 @@ const Technologies = () => {
       "CSS",
       "Axios",
       "jQuery",
+      "React Hook Form",
+      "d3",
     ],
     [
       "Backend",
       "Flask",
       "Express",
       "JWT",
+      "bcrypt",
       "pandas",
       "MLxtend",
       "Webpack",
       "Node.js",
+      "RESTful APIs",
     ],
     [
       "Databases",
@@ -43,6 +47,15 @@ const Technologies = () => {
       "Neo4j",
       "Cypher",
     ],
+    ["Tools", "Git", "WebPack", "Linux", "Expo", "Heroku", "Figma", "Jest"],
+    [
+      "Skills",
+      "OOP",
+      "Functional Programming",
+      "TDD",
+      "Data Structures",
+      "Algorithms",
+    ],
   ];
 
   const boxStyles = css({
@@ -54,7 +67,9 @@ const Technologies = () => {
   });
 
   const listStyles = css({
-    margin: "1rem",
+    minWidth: "5rem",
+    maxWidth: "25vw",
+    margin: "0.5rem",
   });
 
   const articleStyles = css(
@@ -78,7 +93,7 @@ const Technologies = () => {
       <H1 color="white" css={{ marginBottom: "2rem" }}>
         Technologies
       </H1>
-      <Box>
+      <Box css={{ justifyContent: "space-between", minWidth: "80vw" }}>
         {technologies.map((list, i) => (
           <span css={listStyles} key={i}>
             <H4 css={{ marginTop: 0, marginBottom: "0.5rem" }}>{list[0]}</H4>

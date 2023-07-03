@@ -52,7 +52,7 @@ const projectsArray = [
     ],
     links: [
       null,
-      "http://www.shop-wild-roots.com/",
+      "https://www.shop-wild-roots.com/",
       "https://github.com/The-Shopperettes/grace-shopper",
     ],
   },

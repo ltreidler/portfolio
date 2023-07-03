@@ -59,7 +59,12 @@ export const SearchAndIcons = ({ link }) => {
     <span css={{ display: "flex", alignItems: "center" }}>
       <Icons />
       <div css={searchStyle}>
-        <a css={{ textDecoration: "none" }} href={link}>
+        <a
+          css={{ textDecoration: "none" }}
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {link}
         </a>
       </div>

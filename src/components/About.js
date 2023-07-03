@@ -46,10 +46,12 @@ const About = () => {
           products.
           <br></br>
           <br></br>
-          I'm especially interested in working in backend or fullstack
-          development, <Red> building data-driven applications</Red> that
-          leverage the latest technologies and tools to create accessible
-          applications that <Red>improve users' lives.</Red>
+          I'm especially interested in{" "}
+          <Red> building data-driven applications</Red> that leverage the latest
+          technologies to create <Red>accessible applications</Red> that have a{" "}
+          <Red>meaningful impact on the world</Red>, from promoting
+          sustainability to increasing access to educational resources to making
+          users' lives easier.
           <br></br>
           <br></br>
           I'm currently doing freelance work, including developing a "creativity
