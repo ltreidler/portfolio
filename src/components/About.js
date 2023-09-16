@@ -39,25 +39,12 @@ const About = () => {
       </div>
       <Box css={descriptionCss}>
         <Body color="black">
-          I'm a software engineer with a passion for{" "}
+          I'm a software engineer at Fabric by Gerber Life with a passion for{" "}
           <Red>learning new technologies</Red> and{" "}
-          <Red>solving complex problems.</Red> I'm constantly striving to expand
-          my knowledge and skills in order to create innovative and impactful
-          products.
-          <br></br>
-          <br></br>
-          I'm especially interested in{" "}
-          <Red> building data-driven applications</Red> that leverage the latest
-          technologies to create <Red>accessible applications</Red> that have a{" "}
-          <Red>meaningful impact on the world</Red>, from promoting
-          sustainability to increasing access to educational resources to making
-          users' lives easier.
-          <br></br>
-          <br></br>
-          I'm currently doing freelance work, including developing a "creativity
-          fitness" mobile application for CreativityPartners, a startup
-          consulting firm, and building a portfolio and online store for a
-          professional comic artist.
+          <Red>solving complex problems.</Red> I'm constantly striving to expand{" "}
+          my knowledge and skills in order to create innovative products that
+          have a <Red>meaningful impact on the world</Red>, from promoting
+          sustainability to increasing access to financial resources.
           <br></br>
           <br></br>Before transitioning to tech, I worked as a radio journalist
           at NPR stations in Milwaukee and Salt Lake City, writing data-driven
@@ -66,10 +53,6 @@ const About = () => {
           <br></br>I studied software engineering at Grace Hopper's immersive
           coding bootcamp, honing my skills in fullstack development and
           collaborating to create <Red>scalable, bug-free applications.</Red>
-          <br></br>
-          <br></br>
-          Now, I'm <Red>searching for a new position</Red> where I can use my
-          technical skills to make impactful products.
         </Body>
       </Box>
     </Section>
